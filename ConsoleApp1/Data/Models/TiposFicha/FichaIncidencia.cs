@@ -16,6 +16,8 @@ namespace PRUEBA.Data.Models.TiposFicha
         public bool EsPropuesta { get; set; }//Si no es propuesta es decision
         public Decision Decision { get; set; }
         public int DecisionId { get; set; }
+        public Decision Propuesta { get; set; }
+        public int PropuestaId { get; set; }
         
     }
 }

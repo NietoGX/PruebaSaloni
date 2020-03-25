@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations;
 public class Seccion
 {
     [Key]
-    public int IdSeccion { get; set; }
+    public int Id { get; set; }
     [Required]
-    public int IdArea { get; set; }
+    public int AreaId { get; set; }
     public Area Area { get; set; }
     [Required]
     public string NombreSeccion { get; set; }
@@ -22,9 +22,5 @@ public class Seccion
     public ICollection<TipoDecisionSeccion> Decisiones { get; set; }
     public ICollection<TipoIncidenciaSeccion> Incidencias { get; set; }
     public ICollection<EmpresaAreaSeccionUsuario> Roles { get; set; }
-    public ICollection<FichaNoConformidad> Fichas { get; set; }
-
-
-
-
+   
 }

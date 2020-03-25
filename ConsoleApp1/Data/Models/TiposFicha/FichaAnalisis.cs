@@ -10,10 +10,13 @@ namespace PRUEBA.Data.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime FechaAnalisis { get; set; }
-        public int IdResponsableAnalisis { get; set; }
-        public int IdPropuesta { get; set; }
-        public int IdDecision { get; set; }
+        public Usuario ResponsableAnalisis { get; set; }
+        public int ResponsableAnalisisId { get; set; }
+        public Decision Propuesta { get; set; }
+        public int PropuestaId { get; set; }
+        public Decision Decision { get; set; }
+        public int DecisionId { get; set; }
         public string Descripcion { get; set; }
-        public bool Finalizada { get; set; }//define si esta rellenada o no
+        
     }
 }

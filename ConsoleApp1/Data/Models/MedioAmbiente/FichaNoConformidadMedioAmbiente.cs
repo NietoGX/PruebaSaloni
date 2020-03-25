@@ -7,14 +7,18 @@ namespace PRUEBA.Data.Models
 
     class FichaNoConformidadMedioAmbiente : FichaNoConformidad
     {
-        [Key]
-        public string Id { get; set; }
+        
         public EstadoEME Estado { get; set; }
 
-        public FichaNoConformidad FichaNoConformidad { get; set; }
+        
+        public string FichaNoConformidadId { get; set; }
         public FichaAnalisis FichaAnalisis { get; set; }
+        public string FichaAnalisisId { get; set; }
         public FichaEjecucion FichaEjecucion { get; set; }
+        public string FichaEjecucionId { get; set; }
         public FichaArticuloEFIMED FichaArticuloEFIMED { get; set; }
+        public string FichaArticuloEFIMEDId { get; set; }
         public FichaIncidencia FichaIncidencia { get; set; }
+        public string FichaIncidenciaId { get; set; }
     }
 }
