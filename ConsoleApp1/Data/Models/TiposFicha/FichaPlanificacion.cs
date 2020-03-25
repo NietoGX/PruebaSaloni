@@ -7,7 +7,9 @@ namespace PRUEBA.Data.Models
     class FichaPlanificacion
     {
         [Key]
-        public int IdFicha { get; set; }
+        public string Id { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime FechaPlanificacion { get; set; }
         public int IdResponsablePlanificacion { get; set; }
         public int IdDecision { get; set; }

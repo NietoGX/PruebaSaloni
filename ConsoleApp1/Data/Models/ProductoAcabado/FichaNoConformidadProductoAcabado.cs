@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PRUEBA.Data.Models.TiposFicha;
+using System.ComponentModel.DataAnnotations;
 
 namespace PRUEBA.Data.Models
 {
@@ -6,10 +7,10 @@ namespace PRUEBA.Data.Models
     {
         EMISOR, CALIDAD, PLANIFICACION, LOGISTICA, FINALIZADA
     }
-    class FichaNoConformidadProductoAcabado
+    class FichaNoConformidadProductoAcabado : FichaNoConformidad
     {
         [Key]
-        public int IdFicha { get; set; }
+        public string Id { get; set; }
         public EstadoProductoAcabado Estado { get; set; }
 
         public FichaNoConformidad FichaNoConformidad { get; set; }
@@ -17,6 +18,8 @@ namespace PRUEBA.Data.Models
         public FichaCalidad FichaCalidad { get; set; }
         public FichaPlanificacion FichaPlanificacion { get; set; }
         public FichaLogistica FichaLogistica { get; set; }
+        public FIchaArticulo FichaArticulo { get; set; }
+        public FichaIncidencia FichaIncidencia { get; set; }
 
     }
 }

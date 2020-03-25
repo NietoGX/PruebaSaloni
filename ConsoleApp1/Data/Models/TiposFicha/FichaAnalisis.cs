@@ -3,12 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PRUEBA.Data.Models
 {
-    class FichaEjecucion
+    class FichaAnalisis
     {
         [Key]
-        public int IdFicha { get; set; }
-        public DateTime FechaEjecucion { get; set; }
-        public int IdResponsableEjecucion { get; set; }
+        public string Id { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime FechaAnalisis { get; set; }
+        public int IdResponsableAnalisis { get; set; }
         public int IdPropuesta { get; set; }
         public int IdDecision { get; set; }
         public string Descripcion { get; set; }

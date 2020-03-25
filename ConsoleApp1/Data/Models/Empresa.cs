@@ -6,7 +6,7 @@ namespace PRUEBA.Data.Models
 
     {
         [Key]
-        public int IdEmpresa { get; set; }
+        public string IdEmpresa { get; set; }
 
         [Required]
         public string NombreEmpresa { get; set; }
